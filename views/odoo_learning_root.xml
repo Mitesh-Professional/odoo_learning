@@ -1,0 +1,122 @@
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="ma_create_root_model_form_view" model="ir.ui.view">
+            <field name="name">ma.create.root.model.form.view</field>
+            <field name="model">ma.root.model</field>
+            <field name="arch" type="xml">
+                <form string="Odoo Learning Journey">
+                    <sheet>
+                        <group>
+                            <div style="display: flex; justify-content: space-between; width: 100%;">
+                                <div style="flex: 1; margin-right: 10px; white-space: nowrap;">
+                                    <h1>Welcome to Your Odoo Learning Journey!</h1>
+                                    <p>
+                                        Dive into the world of Odoo and unlock the potential of your business.
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="width: 100%;">
+                                <h2>Get Started!</h2>
+                                <p style="white-space: nowrap;">
+                                    Ready to start? Click the 'Get Started' button below to begin your Odoo learning
+                                    experience.
+                                </p>
+                                <p style="white-space: nowrap;">Check Out Class Page And Start your Learning.</p>
+                            </div>
+                        </group>
+                        <group>
+                            <div style="flex: 1; margin-left: 10px; white-space: nowrap;">
+                                <h2>Learning Objectives</h2>
+                                <ul>
+                                    <li>Navigate the Odoo interface with ease</li>
+                                    <li>Understand key features and functionalities</li>
+                                    <li>Customize Odoo to fit your unique business needs</li>
+                                    <li>Automate processes to improve efficiency</li>
+                                </ul>
+                            </div>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="ma_create_root_action" model="ir.actions.act_window">
+            <field name="name">Create Root Model</field>
+            <field name="res_model">ma.root.model</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <!-- Menu Item Root -->
+        <menuitem id="ma_menu_item_root" name="Odoo Learning" action="ma_create_root_action"/>
+        <menuitem id="ma_menu_item_nav_section_create_model" name="Class" parent="ma_menu_item_root"/>
+        <menuitem id="ma_menu_item_nav_section_class_attribute" name="Class Attribute" parent="ma_menu_item_root"/>
+        <menuitem id="ma_menu_item_nav_section_fields" name="Fields" parent="ma_menu_item_root"/>
+        <menuitem id="ma_menu_item_nav_section_view" name="Views" parent="ma_menu_item_root"/>
+
+        <!--        Class Attribute-->
+        <menuitem id="ma_menu_item_create_model" name="Create Model" parent="ma_menu_item_nav_section_create_model"
+                  action="ma_create_model_action"/>
+
+        <menuitem id="ma_abstract_root_menu" name="Abstract" parent="ma_menu_item_nav_section_create_model"
+                  action="ma_abstract_model_action"/>
+
+        <menuitem id="ma_user_info_root_view" name="User" parent="ma_menu_item_nav_section_create_model"
+                  action="ma_user_info_action_form_view"/>
+        <menuitem id="ma_user_info_sum_view" name="User Info" parent="ma_user_info_root_view"
+                  action="ma_user_info_action"/>
+        <menuitem id="menu_my_wizard" name="My Wizard" action="action_my_wizard" parent="ma_user_info_root_view"/>
+
+        <menuitem id="ma_name_attribute_root_menu" name="_Name" parent="ma_menu_item_nav_section_class_attribute"
+                  action="ma_name_attribute_action"/>
+        <menuitem id="ma_description_attribute_root_menu" name="_Description"
+                  parent="ma_menu_item_nav_section_class_attribute" action="ma_description_attribute_action"/>
+        <menuitem id="ma_rec_name_attribute_root_menu" name="_rec_name"
+                  parent="ma_menu_item_nav_section_class_attribute"
+                  action="ma_rec_name_attribute_action"/>
+        <menuitem id="ma_order_attribute_root_menu" name="_Order"
+                  parent="ma_menu_item_nav_section_class_attribute"
+                  action="ma_order_attribute_action"/>
+        <menuitem id="ma_inherit_attribute_root_menu" name="_Inherit"
+                  parent="ma_menu_item_nav_section_class_attribute"
+                  action="ma_inherited_attribute_action"/>
+        <menuitem id="ma_inherits_actions_root" name="_Inherits" parent="ma_menu_item_nav_section_class_attribute"
+                  action="ma_inherits_action"/>
+
+        <!--        this is Fields-->
+        <menuitem id="ma_char_field_root" name="Char Field" action="ma_char_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_integer_field_root" name="Integer Field" action="ma_integer_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_float_field_root" name="Float Field" action="ma_float_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_date_field_root" name="Date Field" action="ma_date_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_date_time_field_root" name="DateTime Field" action="ma_date_time_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_boolean_field_root" name="Boolean Field" action="ma_boolean_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_binary_field_root" name="Binary Field" action="ma_binary_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_html_field_root" name="Html Field" action="ma_html_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_selection_field_root" name="Selection Field" action="ma_selection_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_text_field_root" name="Text Field" action="ma_text_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_monetary_field_root" name="Monetary Field" action="ma_monetary_field_action"
+                  parent="ma_menu_item_nav_section_fields"/>
+
+        <!--        this is View menu-->
+        <menuitem id="ma_tree_menu_item_root" action="ma_tree_action_view" name="Tree View"
+                  parent="ma_menu_item_nav_section_view"/>
+        <menuitem id="ma_form_menu_item_root" action="ma_form_action_view" name="Form View"
+                  parent="ma_menu_item_nav_section_view"/>
+        <menuitem id="ma_view_calender_manu_item_root" name="Calender View" action="ma_view_calendar_action"
+                  parent="ma_menu_item_nav_section_view"/>
+        <menuitem id="ma_view_graph_manu_item" name="Graph View" action="ma_view_graph_action"
+                  parent="ma_menu_item_nav_section_view"/>
+
+    </data>
+</odoo>

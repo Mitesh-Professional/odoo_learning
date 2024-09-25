@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="ma_inherits_form_view" model="ir.ui.view">
+            <field name="name">ma.inherits.form.view</field>
+            <field name="model">ma.inherits</field>
+            <field name="arch" type="xml">
+                <form string="This is Form View">
+                    <sheet>
+                        <group>
+                            <field name="user_name"/>  <!-- This should be valid -->
+                            <field name="user_email"/>
+                            <field name="user_password"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_inherits_tree_view" model="ir.ui.view">
+            <field name="name">ma.inherits.tree.view</field>
+            <field name="model">ma.inherits</field>
+            <field name="arch" type="xml">
+                <tree string="This is Tree View">
+                    <field name="user_name"/>  <!-- This should be valid -->
+                    <field name="user_email"/>
+                    <field name="user_password"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ma_inherits_action" model="ir.actions.act_window">
+            <field name="name">Inherits</field>
+            <field name="res_model">ma.inherits</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

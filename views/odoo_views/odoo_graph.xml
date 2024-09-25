@@ -1,0 +1,52 @@
+<odoo>
+    <record id="ma_view_graph_form" model="ir.ui.view">
+        <field name="name">ma.view.graph.form</field>
+        <field name="model">ma.graph.view</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>This view has overly complex coding; instead, focus on reviewing and learning how it works and how it is structured, without diving into the coding details.
+                    </h1>
+                    <separator string=" "/>
+                    <group>
+                        <field name="name"/>
+                        <field name="std"/>
+                        <field name="school"/>
+                        <field name="students"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_view_graph_tree" model="ir.ui.view">
+        <field name="name">ma.view.graph.tree</field>
+        <field name="model">ma.graph.view</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="std"/>
+                <field name="school"/>
+                <field name="students"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ma_view_graph" model="ir.ui.view">
+        <field name="name">ma.view.graph</field>
+        <field name="model">ma.graph.view</field>
+        <field name="arch" type="xml">
+<!--            type="bar, line, pie" -->
+            <graph disable_linking="1" stacked="False" type="pie">
+                <field name="school"/>
+                <field name="students"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="ma_view_graph_action" model="ir.actions.act_window">
+        <field name="name">Graph View</field>
+        <field name="res_model">ma.graph.view</field>
+        <field name="view_mode">graph,tree,form</field>
+    </record>
+</odoo>

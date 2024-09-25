@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="ma_monetary_field_form_view" model="ir.ui.view">
+            <field name="name">ma.monetary.field.form.view</field>
+            <field name="model">ma.monetary.field</field>
+            <field name="arch" type="xml">
+                <form string="Your Model Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="amount"/>
+                            <field name="currency_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="ma_monetary_field_tree_view" model="ir.ui.view">
+            <field name="name">ma.monetary.field.tree.view</field>
+            <field name="model">ma.monetary.field</field>
+            <field name="arch" type="xml">
+                <tree string="Your Models">
+                    <field name="name"/>
+                    <field name="amount"/>
+                    <field name="currency_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="ma_monetary_field_action" model="ir.actions.act_window">
+            <field name="name">Monetary Fields</field>
+            <field name="res_model">ma.monetary.field</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

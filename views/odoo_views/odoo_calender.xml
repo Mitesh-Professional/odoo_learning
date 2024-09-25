@@ -1,0 +1,58 @@
+<odoo>
+    <record id="ma_view_calendar_form" model="ir.ui.view">
+        <field name="name">ma.view.calendar.form</field>
+        <field name="model">ma.calender.view</field>
+        <field name="arch" type="xml">
+            <form string="Task Form">
+                <group>
+                    <field name="date"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="ma_view_calendar_form" model="ir.ui.view">
+        <field name="name">ma.view.calendar.form</field>
+        <field name="model">ma.calender.view</field>
+        <field name="arch" type="xml">
+            <form string="Task Form">
+                <sheet>
+                    <h1>If you want to create a single-day calendar view, provide a starting and stopping date using a single field date.</h1>
+                    <separator string=" " />
+                    <group>
+                        <field name="task_name"/>
+                        <field name="date"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ma_view_calendar_tree" model="ir.ui.view">
+        <field name="name">ma.view.calendar.tree</field>
+        <field name="model">ma.calender.view</field>
+        <field name="arch" type="xml">
+            <tree string="Task Tree">
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ma_view_calendar" model="ir.ui.view">
+        <field name="name">ma.view.calendar</field>
+        <field name="model">ma.calender.view</field>
+        <field name="arch" type="xml">
+            <calendar string="Task Calendar" date_start="start_date" date_stop="end_date" color="date" mode="month" create="0" quick_create="0">
+                <field name="date"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="ma_view_calendar_action" model="ir.actions.act_window">
+        <field name="name">Calendar View</field>
+        <field name="res_model">ma.calender.view</field>
+        <field name="view_mode">calendar, tree, form</field>
+    </record>
+
+    <!--    <menuitem id="menu_ma_calendar" name="Calendar" action="ma_view_calendar_action" sequence="10"/>-->
+</odoo>

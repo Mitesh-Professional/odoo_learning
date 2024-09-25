@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="ma_binary_field_form_view" model="ir.ui.view">
+            <field name="name">ma.binary.field.form.view</field>
+            <field name="model">ma.binary.field</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="first_name" filename="file_name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_binary_field_tree_view" model="ir.ui.view">
+            <field name="name">ma.binary.field.tree.view</field>
+            <field name="model">ma.char.field</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="first_name" filename="file_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ma_binary_field_action" model="ir.actions.act_window">
+            <field name="name">Binary Field</field>
+            <field name="res_model">ma.binary.field</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

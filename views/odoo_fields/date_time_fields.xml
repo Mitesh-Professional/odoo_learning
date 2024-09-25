@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="ma_date_time_field_form_view" model="ir.ui.view">
+            <field name="name">ma.date.time.field.form.view</field>
+            <field name="model">ma.date.time.field</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="enter_date_time"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_date_time_field_tree_view" model="ir.ui.view">
+            <field name="name">ma.date.time.field.tree.view</field>
+            <field name="model">ma.date.time.field</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="enter_date_time"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ma_date_time_field_action" model="ir.actions.act_window">
+            <field name="name">DateTime Field</field>
+            <field name="res_model">ma.date.time.field</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

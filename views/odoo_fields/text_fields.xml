@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="ma_text_field_form_view" model="ir.ui.view">
+            <field name="name">ma.text.field.form.view</field>
+            <field name="model">ma.text.field</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="first_name"/>
+                        <field name="last_name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_text_field_tree_view" model="ir.ui.view">
+            <field name="name">ma.text.field.tree.view</field>
+            <field name="model">ma.text.field</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="first_name"/>
+                    <field name="last_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ma_text_field_action" model="ir.actions.act_window">
+            <field name="name">Text Field</field>
+            <field name="res_model">ma.text.field</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="ma_create_model_form_view" model="ir.ui.view">
+            <field name="name">ma.create.model.form.view</field>
+            <field name="model">ma.create.model</field>
+            <field name="arch" type="xml">
+                <form string="Form View">
+                    <sheet>
+                        <group>
+                            <field name="name" placeholder="Enter Your Name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_create_model_tree_view" model="ir.ui.view">
+            <field name="name">ma.create.model.tree.view</field>
+            <field name="model">ma.create.model</field>
+            <field name="arch" type="xml">
+                <tree string="This is Tree View">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="ma_create_model_action" model="ir.actions.act_window">
+            <field name="name">Create Model</field>
+            <field name="context">{'default_name': "This is Default Name using Context"}</field>
+            <field name="res_model">ma.create.model</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

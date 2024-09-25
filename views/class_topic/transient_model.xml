@@ -1,0 +1,40 @@
+<odoo>
+    <record id="ma_user_info_form" model="ir.ui.view">
+        <field name="name">ma.user.info.form</field>
+        <field name="model">ma.user.info</field>
+        <field name="arch" type="xml">
+            <form string="This Form View">
+                <sheet>
+                    <group string="This is User Info Form">
+                        <field name="enter_name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_user_info_tree" model="ir.ui.view">
+        <field name="name">ma.user.info.tree</field>
+        <field name="model">ma.user.info</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="enter_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ma_user_info_action" model="ir.actions.act_window">
+        <field name="name">User View</field>
+        <field name="res_model">ma.user.info</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="ma_user_info_tree"/>
+    </record>
+
+    <record id="ma_user_info_action_form_view" model="ir.actions.act_window">
+        <field name="name">User Form</field>
+        <field name="res_model">ma.user.info</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="ma_user_info_form"/>
+    </record>
+</odoo>
+

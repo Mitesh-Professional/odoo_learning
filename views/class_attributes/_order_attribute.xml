@@ -1,0 +1,35 @@
+<odoo>
+    <record id="ma_order_attribute_form_view" model="ir.ui.view">
+        <field name="name">ma.order.attribute.form.view</field>
+        <field name="model">ma.order</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>What is _order?</h1>
+                    <h2>In Odoo, the _order attribute specifies the default sorting order for records of a model. It is
+                        defined using field names, allowing you to control how records are displayed in lists.
+                    </h2>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_order_attribute_tree_view" model="ir.ui.view">
+        <field name="name">ma.order.attribute.tree.view</field>
+        <field name="model">ma.order</field>
+        <field name="arch" type="xml">
+            <tree string="tree view">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="ma_order_attribute_action" model="ir.actions.act_window">
+        <field name="name">_Order</field>
+        <field name="res_model">ma.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

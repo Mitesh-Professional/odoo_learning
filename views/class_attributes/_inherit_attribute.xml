@@ -1,0 +1,37 @@
+<odoo>
+    <record id="ma_inherited_attribute_form_view" model="ir.ui.view">
+        <field name="name">ma.inherited.attribute.form.view</field>
+        <field name="model">ma.inherited</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>What is _inherit?</h1>
+                    <h2>In Odoo, _inherit is an attribute used in model definitions to extend existing models. By specifying _inherit, you can add new fields, methods, or override existing ones without altering the original model. This allows for customization and modular development, enabling you to enhance core functionality while maintaining compatibility with Odoo updates. It's a powerful feature for building tailored solutions within the Odoo framework.</h2>
+                    <group>
+                        <field name="name"/>
+                        <field name="address"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_inherited_attribute_tree_view" model="ir.ui.view">
+        <field name="name">ma.inherited.attribute.tree.view</field>
+        <field name="model">ma.inherited</field>
+        <field name="arch" type="xml">
+            <tree string="tree view">
+                <field name="name"/>
+                <field name="address"/>
+            </tree>
+        </field>
+    </record>
+    <record id="ma_inherited_attribute_action" model="ir.actions.act_window">
+        <field name="name">Inherited Name</field>
+        <field name="res_model">ma.inherited</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<!--    <menuitem id="ma_inherit_attribute_root_menu" name="_Inherit"-->
+<!--              parent="ma_menu_item_nav_section_class_attribute"-->
+<!--              action="ma_inherited_attribute_action"/>-->
+</odoo>

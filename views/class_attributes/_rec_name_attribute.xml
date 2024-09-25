@@ -1,0 +1,35 @@
+<odoo>
+    <record id="ma_rec_name_attribute_form_view" model="ir.ui.view">
+        <field name="name">ma.rec.name.attribute.form.view</field>
+        <field name="model">ma.rec.name</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>What is _rec_name?</h1>
+                    <h2>In Odoo, the _rec_name attribute defines the field used as the display name for records of a
+                        model, which is shown in the user interface.
+                    </h2>
+                    <h1> </h1>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_rec_name_attribute_tree_view" model="ir.ui.view">
+        <field name="name">ma.rec.name.attribute.tree.view</field>
+        <field name="model">ma.rec.name</field>
+        <field name="arch" type="xml">
+            <tree string="tree view">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="ma_rec_name_attribute_action" model="ir.actions.act_window">
+        <field name="name">Rec Name</field>
+        <field name="res_model">ma.rec.name</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

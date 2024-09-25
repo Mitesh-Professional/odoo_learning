@@ -1,0 +1,49 @@
+<odoo>
+    <record id="ma_form_view_tree" model="ir.ui.view">
+        <field name="name">ma.form.view.tree</field>
+        <field name="model">ma.form.view</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <div class="o_td_label">
+                            <label for="name" string="Name" invisible="not name"/>
+                            <label for="age" string="Age" invisible="not age"/>
+                        </div>
+                        <div class="d-flex"
+                             name="name_age">
+                            <field name="name" placeholder="Enter Name"/>
+                            <span class="o_form_label mx-3 oe_edit_only">or</span>
+                            <field name="age" placeholder="Enter Age"/>
+                        </div>
+                    </group>
+                    <group>
+                        <div class="o_field_widget o_form_field o_field_text">
+                            <field name="name"/>
+                            <button string="Upload" type="object" name="action_confirm" class="btn btn-primary o_button"
+                                    style="margin-left: -4px;"/>
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_tree_view_form" model="ir.ui.view">
+        <field name="name">ma.form.view.tree</field>
+        <field name="model">ma.form.view</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ma_form_action_view" model="ir.actions.act_window">
+        <field name="name">Form View</field>
+        <field name="res_model">ma.form.view</field>
+        <field name="view_mode">form,tree</field>
+        <field name="view_id" ref="ma_form_view_tree"/>
+    </record>
+</odoo>

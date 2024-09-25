@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="ma_selection_field_form_view" model="ir.ui.view">
+            <field name="name">ma.selection.field.form.view</field>
+            <field name="model">ma.selection.field</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="city_name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_selection_field_tree_view" model="ir.ui.view">
+            <field name="name">ma.selection.field.tree.view</field>
+            <field name="model">ma.selection.field</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="city_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ma_selection_field_action" model="ir.actions.act_window">
+            <field name="name">Selection Field</field>
+            <field name="res_model">ma.selection.field</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_ma.root.model_user,access_ma_root_model_user,model_ma_root_model,base.group_user,1,0,0,0
+
+access_ma.create.model_user,access_ma_create_model_user,model_ma_create_model,base.group_user,1,1,1,1
+
+access_ma_test_model_user,access_ma_test_model_user,model_ma_test_model,base.group_user,1,1,1,1
+
+access_ma_user_info_user,Access to ma.user.info for user,model_ma_user_info,base.group_user,1,1,1,1
+access_my_wizard_user,Access to my_wizard for user,model_my_wizard,base.group_user,1,1,1,1
+
+access_ma.name_user,access_ma_name_user,model_ma_name,base.group_user,1,0,0,0
+access_ma.description_user,access_ma_description_user,model_ma_description,base.group_user,1,0,0,0
+access_ma.rec.name_user,access_ma_rec_name_user,model_ma_rec_name,base.group_user,1,1,1,1
+access_ma.order_user,access_ma_order_user,model_ma_order,base.group_user,1,1,1,1
+access_ma.inherited_user,access_ma_inherited_user,model_ma_inherited,base.group_user,1,1,1,1
+access_ma.inherits,access_ma_inherits_user,model_ma_inherits,base.group_user,1,1,1,1
+
+access_ma.char.field,access_ma_char_field_user,model_ma_char_field,base.group_user,1,1,1,1
+access_ma.integer.field,access_ma_integer_field_user,model_ma_integer_field,base.group_user,1,1,1,1
+access_ma.float.field,access_ma_float_field_user,model_ma_float_field,base.group_user,1,1,1,1
+access_ma.date.field,access_ma_date_field_user,model_ma_date_field,base.group_user,1,1,1,1
+access_ma.date.time.field,access_ma_date_time_field_user,model_ma_date_time_field,base.group_user,1,1,1,1
+access_ma.boolean.field,access_ma_boolean_field_user,model_ma_boolean_field,base.group_user,1,1,1,1
+access_ma.binary.field,access_ma_binary_field_user,model_ma_binary_field,base.group_user,1,1,1,1
+access_ma.html.field,access_ma_html_field_user,model_ma_html_field,base.group_user,1,1,1,1
+access_ma.selection.field,access_ma_selection_field_user,model_ma_selection_field,base.group_user,1,1,1,1
+access_ma.text.field,access_ma_text_field_user,model_ma_text_field,base.group_user,1,1,1,1
+access_ma.monetary.field,access_ma_monetary_field_user,model_ma_monetary_field,base.group_user,1,1,1,1
+
+
+access_ma.tree.view,access_ma_tree_view_user,model_ma_tree_view,base.group_user,1,1,1,1
+access_ma.form.view,access_ma_form_view_user,model_ma_form_view,base.group_user,1,1,1,1
+access_ma.calender.view,access_ma_calender_view_user,model_ma_calender_view,base.group_user,1,1,1,1
+access_ma.graph.view,access_ma_graph_view_user,model_ma_graph_view,base.group_user,1,1,1,1

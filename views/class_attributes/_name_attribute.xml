@@ -1,0 +1,22 @@
+<odoo>
+    <record id="ma_name_attribute_form_view" model="ir.ui.view">
+        <field name="name">ma.name.attribute.form.view</field>
+        <field name="model">ma.name</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>What is _name?</h1>
+                    <h2>In Odoo, the _name attribute defines the unique technical name of a model, typically in the format module_name.model_name. It is used by the Odoo framework to identify the model within the system and during database operations.</h2>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_name_attribute_action" model="ir.actions.act_window">
+        <field name="name">_Name</field>
+        <field name="res_model">ma.name</field>
+        <field name="view_mode">form</field>
+    </record>
+
+<!--    <menuitem id="ma_name_attribute_root_menu" name="_Name" action="ma_name_attribute_action"/>-->
+</odoo>
