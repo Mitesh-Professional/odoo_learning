@@ -4,8 +4,10 @@
     "author": "Mitesh Amin",
     "data": [
         "security/ir.model.access.csv",
+        "views/odoo_views/odoo_pivot.xml",
         "views/odoo_views/odoo_graph.xml",
         "views/odoo_views/odoo_calender.xml",
+        "views/odoo_views/odoo_search.xml",
         "views/odoo_views/odoo_form.xml",
         "views/odoo_views/odoo_tree.xml",
         "views/odoo_fields/monetary_fields.xml",

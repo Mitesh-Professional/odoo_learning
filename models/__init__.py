@@ -21,6 +21,8 @@ from .odoo_fields import text_fields
 from .odoo_fields import monetary_fields
 from .odoo_views import odoo_tree
 from .odoo_views import odoo_form
+from .odoo_views import odoo_search
 from .odoo_views import odoo_calender
 from .odoo_views import odoo_graph
+from .odoo_views import odoo_pivot
 

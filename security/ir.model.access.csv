@@ -31,5 +31,7 @@ access_ma.monetary.field,access_ma_monetary_field_user,model_ma_monetary_field,b
 
 access_ma.tree.view,access_ma_tree_view_user,model_ma_tree_view,base.group_user,1,1,1,1
 access_ma.form.view,access_ma_form_view_user,model_ma_form_view,base.group_user,1,1,1,1
+access_ma.search.view,access_ma_search_view_user,model_ma_search_view,base.group_user,1,1,1,1
 access_ma.calender.view,access_ma_calender_view_user,model_ma_calender_view,base.group_user,1,1,1,1
 access_ma.graph.view,access_ma_graph_view_user,model_ma_graph_view,base.group_user,1,1,1,1
+access_ma.pivot.view,access_ma_pivot_view_user,model_ma_pivot_view,base.group_user,1,1,1,1

@@ -1,3 +1,57 @@
 <odoo>
+    <record id="ma_view_search_form" model="ir.ui.view">
+        <field name="name">ma.view.search.form</field>
+        <field name="model">ma.search.view</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>This view has overly complex coding; instead, focus on reviewing and learning how it works and
+                        how it is structured, without diving into the coding details.
+                    </h1>
+                    <separator string=" "/>
+                    <group>
+                        <field name="name"/>
+                        <field name="password"/>
+                        <field name="account" reqired="True"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
+    <record id="ma_view_search_tree" model="ir.ui.view">
+        <field name="name">ma.view.search.tree</field>
+        <field name="model">ma.search.view</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="password"/>
+                <field name="account"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ma_view_search" model="ir.ui.view">
+        <field name="name">ma.view.search</field>
+        <field name="model">ma.search.view</field>
+        <field name="arch" type="xml">
+            <search>
+                <!--<field name="name" filter_domain="[('name','ilike',self)]"/>&ndash;&gt;-->
+                <!--<filter name="account" string="Have Account" domain="[('account', '=', 'yes')"/>-->
+                <filter name="account" string="Have Account" domain="[('account', '=', 'yes')]"/>
+                <separator/>
+                <filter name="account" string="Have Not Account" domain="[('account', '=', 'no')]"/>
+
+                <group string="Group By">
+                    <filter name="account" string="Have Not Account" context="{'group_by':'account'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="ma_view_search_action" model="ir.actions.act_window">
+        <field name="name">Search View</field>
+        <field name="res_model">ma.search.view</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 </odoo>

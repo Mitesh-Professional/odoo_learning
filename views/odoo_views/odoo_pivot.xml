@@ -1,3 +1,51 @@
 <odoo>
+    <record id="ma_view_pivot_form" model="ir.ui.view">
+        <field name="name">ma.view.pivot.form</field>
+        <field name="model">ma.pivot.view</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>This view has overly complex coding; instead, focus on reviewing and learning how it works and
+                        how it is structured, without diving into the coding details.
+                    </h1>
+                    <separator string=" "/>
+                    <group>
+                        <field name="employee"/>
+                        <field name="salary"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
+    <record id="ma_view_pivot_tree" model="ir.ui.view">
+        <field name="name">ma.view.pivot.tree</field>
+        <field name="model">ma.pivot.view</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee"/>
+                <field name="salary"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ma_view_pivot" model="ir.ui.view">
+        <field name="name">ma.view.pivot</field>
+        <field name="model">ma.pivot.view</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="employee"/>
+                <field name="salary" type="measure"/>
+
+<!--                <field name="employee" type="col"/>-->
+<!--                <field name="salary" type="row"/>-->
+            </pivot>
+        </field>
+    </record>
+
+    <record id="ma_view_pivot_action" model="ir.actions.act_window">
+        <field name="name">Pivot View</field>
+        <field name="res_model">ma.pivot.view</field>
+        <field name="view_mode">pivot,tree,form</field>
+    </record>
 </odoo>

@@ -51,7 +51,7 @@
     <record id="ma_view_calendar_action" model="ir.actions.act_window">
         <field name="name">Calendar View</field>
         <field name="res_model">ma.calender.view</field>
-        <field name="view_mode">calendar, tree, form</field>
+        <field name="view_mode">calendar,form,tree</field>
     </record>
 
     <!--    <menuitem id="menu_ma_calendar" name="Calendar" action="ma_view_calendar_action" sequence="10"/>-->

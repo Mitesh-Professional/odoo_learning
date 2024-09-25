@@ -113,10 +113,13 @@
                   parent="ma_menu_item_nav_section_view"/>
         <menuitem id="ma_form_menu_item_root" action="ma_form_action_view" name="Form View"
                   parent="ma_menu_item_nav_section_view"/>
+        <menuitem id="ma_view_search_manu_item" name="Search View" action="ma_view_search_action"
+                  parent="ma_menu_item_nav_section_view"/>
         <menuitem id="ma_view_calender_manu_item_root" name="Calender View" action="ma_view_calendar_action"
                   parent="ma_menu_item_nav_section_view"/>
         <menuitem id="ma_view_graph_manu_item" name="Graph View" action="ma_view_graph_action"
                   parent="ma_menu_item_nav_section_view"/>
-
+        <menuitem id="ma_view_pivot_manu_item" name="Pivot View" action="ma_view_pivot_action"
+                  parent="ma_menu_item_nav_section_view"/>
     </data>
 </odoo>
