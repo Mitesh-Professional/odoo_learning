@@ -19,6 +19,7 @@ from .odoo_fields import html_fields
 from .odoo_fields import selection_fields
 from .odoo_fields import text_fields
 from .odoo_fields import monetary_fields
+from .odoo_fields import relational_1_field
 from .odoo_views import odoo_tree
 from .odoo_views import odoo_form
 from .odoo_views import odoo_search

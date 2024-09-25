@@ -108,6 +108,15 @@
         <menuitem id="ma_monetary_field_root" name="Monetary Field" action="ma_monetary_field_action"
                   parent="ma_menu_item_nav_section_fields"/>
 
+        <menuitem id="ma_many_to_one_or_one_to_many_root" name="Relational Field"
+                  parent="ma_menu_item_nav_section_fields"/>
+        <menuitem id="ma_many_to_one_menu_item_action" name="Many2one Field"
+                  parent="ma_many_to_one_or_one_to_many_root"
+                  action="ma_many_to_one_action"/> <!-- Corrected action ID -->
+        <menuitem id="ma_one_to_many_menu_item_action" name="One2many Field"
+                  parent="ma_many_to_one_or_one_to_many_root"
+                  action="ma_one_to_many_action"/> <!-- Corrected action ID -->
+
         <!--        this is View menu-->
         <menuitem id="ma_tree_menu_item_root" action="ma_tree_action_view" name="Tree View"
                   parent="ma_menu_item_nav_section_view"/>

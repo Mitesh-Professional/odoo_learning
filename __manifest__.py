@@ -10,6 +10,7 @@
         "views/odoo_views/odoo_search.xml",
         "views/odoo_views/odoo_form.xml",
         "views/odoo_views/odoo_tree.xml",
+        "views/odoo_fields/relational_1_field.xml",
         "views/odoo_fields/monetary_fields.xml",
         "views/odoo_fields/text_fields.xml",
         "views/odoo_fields/selection_fields.xml",

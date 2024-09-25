@@ -27,6 +27,8 @@ access_ma.html.field,access_ma_html_field_user,model_ma_html_field,base.group_us
 access_ma.selection.field,access_ma_selection_field_user,model_ma_selection_field,base.group_user,1,1,1,1
 access_ma.text.field,access_ma_text_field_user,model_ma_text_field,base.group_user,1,1,1,1
 access_ma.monetary.field,access_ma_monetary_field_user,model_ma_monetary_field,base.group_user,1,1,1,1
+access_ma.many.to.one,access_ma_many_to_one_user,model_ma_many_to_one,base.group_user,1,1,1,1
+access_ma.one.to.many,access_ma_one_to_many_user,model_ma_one_to_many,base.group_user,1,1,1,1
 
 
 access_ma.tree.view,access_ma_tree_view_user,model_ma_tree_view,base.group_user,1,1,1,1
