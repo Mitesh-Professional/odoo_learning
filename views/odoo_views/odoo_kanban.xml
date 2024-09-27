@@ -1,0 +1,51 @@
+<odoo>
+    <record id="ma_view_kanban_form" model="ir.ui.view">
+        <field name="name">ma.view.kanban.</field>
+        <field name="model">ma.kanban.view</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="patient"/>
+                        <field name="appointment_date"/>
+                        <field name="doctor"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ma_view_kanban_tree" model="ir.ui.view">
+        <field name="name">ma.view.kanban.</field>
+        <field name="model">ma.kanban.view</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="patient"/>
+                <field name="appointment_date"/>
+                <field name="doctor"/>
+            </tree>
+        </field>
+    </record>
+    <record id="ma_view_kanban" model="ir.ui.view">
+        <field name="name">ma.kanban.view.kanban</field>
+        <field name="model">ma.kanban.view</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="doctor">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div>
+                            <field name="patient"/>
+                            <field name="appointment_date"/>
+                            <field name="doctor"/>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="ma_view_kanban_action" model="ir.actions.act_window">
+        <field name="name">Kanban View</field>
+        <field name="res_model">ma.kanban.view</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+</odoo>

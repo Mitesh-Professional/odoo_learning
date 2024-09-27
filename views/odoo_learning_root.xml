@@ -5,7 +5,7 @@
             <field name="name">ma.create.root.model.form.view</field>
             <field name="model">ma.root.model</field>
             <field name="arch" type="xml">
-                <form string="Odoo Learning Journey">
+                <form string="Odoo Learning Journey" on_create="1">
                     <sheet>
                         <group>
                             <div style="display: flex; justify-content: space-between; width: 100%;">
@@ -112,10 +112,17 @@
                   parent="ma_menu_item_nav_section_fields"/>
         <menuitem id="ma_many_to_one_menu_item_action" name="Many2one Field"
                   parent="ma_many_to_one_or_one_to_many_root"
-                  action="ma_many_to_one_action"/> <!-- Corrected action ID -->
+                  action="ma_many_to_one_action"/>
         <menuitem id="ma_one_to_many_menu_item_action" name="One2many Field"
                   parent="ma_many_to_one_or_one_to_many_root"
-                  action="ma_one_to_many_action"/> <!-- Corrected action ID -->
+                  action="ma_one_to_many_action"/>
+
+        <menuitem id="ma_many_2_many_student_menu_item_action" name="Many2many Student Field"
+                  parent="ma_many_to_one_or_one_to_many_root"
+                  action="ma_many_2_many_field_student_action"/>
+        <menuitem id="ma_many_2_many_menu_item_action" name="Many2many School Field"
+                  parent="ma_many_to_one_or_one_to_many_root"
+                  action="ma_many_2_many_field_school_action"/>
 
         <!--        this is View menu-->
         <menuitem id="ma_tree_menu_item_root" action="ma_tree_action_view" name="Tree View"
@@ -129,6 +136,13 @@
         <menuitem id="ma_view_graph_manu_item" name="Graph View" action="ma_view_graph_action"
                   parent="ma_menu_item_nav_section_view"/>
         <menuitem id="ma_view_pivot_manu_item" name="Pivot View" action="ma_view_pivot_action"
+                  parent="ma_menu_item_nav_section_view"/>
+        <menuitem id="ma_gantt_manu_item_root" name="Gantt View" action="ma_gantt_action"
+                  parent="ma_menu_item_nav_section_view"/>
+        <menuitem id="ma_cohort_manu_item_root" name="Cohort View" action="ma_cohort_action"
+                  parent="ma_menu_item_nav_section_view"/>
+
+        <menuitem id="ma_kanban_manu_item_root" name="Kanban View" action="ma_view_kanban_action"
                   parent="ma_menu_item_nav_section_view"/>
     </data>
 </odoo>

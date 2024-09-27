@@ -29,7 +29,8 @@ access_ma.text.field,access_ma_text_field_user,model_ma_text_field,base.group_us
 access_ma.monetary.field,access_ma_monetary_field_user,model_ma_monetary_field,base.group_user,1,1,1,1
 access_ma.many.to.one,access_ma_many_to_one_user,model_ma_many_to_one,base.group_user,1,1,1,1
 access_ma.one.to.many,access_ma_one_to_many_user,model_ma_one_to_many,base.group_user,1,1,1,1
-
+access_ma.student.field,access_ma_student_field_user,model_ma_student_field,base.group_user,1,1,1,1
+access_ma.many2many.field,access_ma_many2many_field_user,model_ma_many2many_field,base.group_user,1,1,1,1
 
 access_ma.tree.view,access_ma_tree_view_user,model_ma_tree_view,base.group_user,1,1,1,1
 access_ma.form.view,access_ma_form_view_user,model_ma_form_view,base.group_user,1,1,1,1
@@ -37,3 +38,6 @@ access_ma.search.view,access_ma_search_view_user,model_ma_search_view,base.group
 access_ma.calender.view,access_ma_calender_view_user,model_ma_calender_view,base.group_user,1,1,1,1
 access_ma.graph.view,access_ma_graph_view_user,model_ma_graph_view,base.group_user,1,1,1,1
 access_ma.pivot.view,access_ma_pivot_view_user,model_ma_pivot_view,base.group_user,1,1,1,1
+access_ma.gantt.view,access_ma_gantt_view_user,model_ma_gantt_view,base.group_user,1,1,1,1
+access_ma.cohort.view,access_ma_cohort_view_user,model_ma_cohort_view,base.group_user,1,1,1,1
+access_ma.kanban.view,access_ma_kanban_view_user,model_ma_kanban_view,base.group_user,1,1,1,1

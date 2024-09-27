@@ -1,0 +1,47 @@
+<odoo>
+    <record id="ma_view_cohort_form" model="ir.ui.view">
+        <field name="name">ma.view.cohort.form</field>
+        <field name="model">ma.cohort.view</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>This view does not exist in the Community Version</h1>
+                    <separator string=" "/>
+                    <group>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_view_cohort_tree" model="ir.ui.view">
+        <field name="name">ma.view.cohort.tree</field>
+        <field name="model">ma.cohort.view</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </tree>
+        </field>
+    </record>
+
+<!--    <record id="ma_view_cohort" model="ir.ui.view">-->
+<!--        <field name="name">ma.view.cohort</field>-->
+<!--        <field name="model">ma.cohort.view</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <cohort date_start="start_date" date_stop="end_date">-->
+<!--                <field name="start_date"/>-->
+<!--                <field name="end_date"/>-->
+<!--            </cohort>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="ma_cohort_action" model="ir.actions.act_window">
+        <field name="name">Cohort View</field>
+        <field name="res_model">ma.cohort.view</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="ma_view_cohort_form"/>
+    </record>
+</odoo>

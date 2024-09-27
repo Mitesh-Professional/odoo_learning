@@ -20,10 +20,14 @@ from .odoo_fields import selection_fields
 from .odoo_fields import text_fields
 from .odoo_fields import monetary_fields
 from .odoo_fields import relational_1_field
+from .odoo_fields import many2many_fields
 from .odoo_views import odoo_tree
 from .odoo_views import odoo_form
 from .odoo_views import odoo_search
 from .odoo_views import odoo_calender
 from .odoo_views import odoo_graph
 from .odoo_views import odoo_pivot
+from .odoo_views import odoo_gantt
+from .odoo_views import odoo_cohort
+from .odoo_views import odoo_kanban
 
