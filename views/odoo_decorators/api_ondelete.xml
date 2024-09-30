@@ -1,0 +1,65 @@
+<odoo>
+    <record id="ma_api_delete_form_view" model="ir.ui.view">
+        <field name="name">ma.api.delete.form.view</field>
+        <field name="model">ma.api.delete</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="related_field"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_api_delete_tree_view" model="ir.ui.view">
+        <field name="name">ma.api.delete.tree.view</field>
+        <field name="model">ma.api.delete</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="related_field"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ma_api_delete_action" model="ir.actions.act_window">
+        <field name="name">Api Delete</field>
+        <field name="res_model">ma.api.delete</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <record id="ma_api_delete_related_model_form_view" model="ir.ui.view">
+        <field name="name">ma.api.delete.related.model.form.view</field>
+        <field name="model">ma.api.delete.related.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_api_delete_related_model_tree_view" model="ir.ui.view">
+        <field name="name">ma.api.delete.related.model.tree.view</field>
+        <field name="model">ma.api.delete.related.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ma_api_delete_related_model_action" model="ir.actions.act_window">
+        <field name="name">Api Delete Related Model</field>
+        <field name="res_model">ma.api.delete.related.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

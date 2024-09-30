@@ -1,0 +1,40 @@
+<odoo>
+    <record id="ma_api_depends_form_view" model="ir.ui.view">
+        <field name="name">ma.api.depends.form.view</field>
+        <field name="model">ma.api.depends</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+<!--                        invisible="student_class == 'a'"-->
+                        <field name="name"/>
+                        <field name="student_std"/>
+                        <field name="student_class"/>
+                        <field name="marks" />
+                        <field name="student_rank"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ma_api_depends_tree_view" model="ir.ui.view">
+        <field name="name">ma.api.depends.tree.view</field>
+        <field name="model">ma.api.depends</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="marks"/>
+                <field name="student_std"/>
+                <field name="student_class"/>
+                <field name="student_rank"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ma_api_depends_action" model="ir.actions.act_window">
+        <field name="name">Api Depends</field>
+        <field name="res_model">ma.api.depends</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -54,6 +54,7 @@
         <menuitem id="ma_menu_item_nav_section_class_attribute" name="Class Attribute" parent="ma_menu_item_root"/>
         <menuitem id="ma_menu_item_nav_section_fields" name="Fields" parent="ma_menu_item_root"/>
         <menuitem id="ma_menu_item_nav_section_view" name="Views" parent="ma_menu_item_root"/>
+        <menuitem id="ma_menu_item_nav_section_decorators" name="Decorators" parent="ma_menu_item_root"/>
 
         <!--        Class Attribute-->
         <menuitem id="ma_menu_item_create_model" name="Create Model" parent="ma_menu_item_nav_section_create_model"
@@ -141,8 +142,29 @@
                   parent="ma_menu_item_nav_section_view"/>
         <menuitem id="ma_cohort_manu_item_root" name="Cohort View" action="ma_cohort_action"
                   parent="ma_menu_item_nav_section_view"/>
-
         <menuitem id="ma_kanban_manu_item_root" name="Kanban View" action="ma_view_kanban_action"
                   parent="ma_menu_item_nav_section_view"/>
+
+        <!--       Odoo Decorators-->
+        <menuitem id="ma_api_model_manu_item_root" name="@api.model" action="ma_api_model_action"
+                  parent="ma_menu_item_nav_section_decorators"/>
+        <menuitem id="ma_api_onchange_manu_item_root" name="@api.onchange" action="ma_api_onchange_action"
+                  parent="ma_menu_item_nav_section_decorators"/>
+        <menuitem id="ma_api_depends_manu_item_root" name="@api.depends" action="ma_api_depends_action"
+                  parent="ma_menu_item_nav_section_decorators"/>
+        <menuitem id="ma_api_constraints_manu_item_root" name="@api.constraints" action="ma_api_constraints_action"
+                  parent="ma_menu_item_nav_section_decorators"/>
+        <menuitem id="ma_api_returns_manu_item_root" name="@api.returns" action="ma_api_returns_action"
+                  parent="ma_menu_item_nav_section_decorators"/>
+        <menuitem id="ma_api_returns_manu_item_root" name="@api.model_create_multi" action="ma_api_model_create_multi_action"
+                  parent="ma_menu_item_nav_section_decorators"/>
+
+        <menuitem id="ma_api_ondelete_decorator_manu_item_root" name="@api.delete Decorator"
+                  parent="ma_menu_item_nav_section_decorators"/>
+        <menuitem id="ma_api_ondelete_manu_item_root" name="@api.delete" action="ma_api_delete_action"
+                  parent="ma_api_ondelete_decorator_manu_item_root"/>
+        <menuitem id="ma_api_ondelete_support_manu_item_root" name="Delete Decorator Supporter"
+                  action="ma_api_delete_related_model_action"
+                  parent="ma_api_ondelete_decorator_manu_item_root"/>
     </data>
 </odoo>

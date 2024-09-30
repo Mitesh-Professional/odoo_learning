@@ -30,4 +30,11 @@ from .odoo_views import odoo_pivot
 from .odoo_views import odoo_gantt
 from .odoo_views import odoo_cohort
 from .odoo_views import odoo_kanban
+from .odoo_decorators import api_model
+from .odoo_decorators import api_onchange
+from .odoo_decorators import api_depends
+from .odoo_decorators import api_constraints
+from .odoo_decorators import api_returns
+from .odoo_decorators import api_model_create_multi
+from .odoo_decorators import api_ondelete
 

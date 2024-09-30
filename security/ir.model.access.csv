@@ -41,3 +41,14 @@ access_ma.pivot.view,access_ma_pivot_view_user,model_ma_pivot_view,base.group_us
 access_ma.gantt.view,access_ma_gantt_view_user,model_ma_gantt_view,base.group_user,1,1,1,1
 access_ma.cohort.view,access_ma_cohort_view_user,model_ma_cohort_view,base.group_user,1,1,1,1
 access_ma.kanban.view,access_ma_kanban_view_user,model_ma_kanban_view,base.group_user,1,1,1,1
+
+
+access_ma.api.model,access_ma_api_model_user,model_ma_api_model,base.group_user,1,1,1,1
+access_ma.api.onchange,access_ma_api_onchange_user,model_ma_api_onchange,base.group_user,1,1,1,1
+access_ma.api.depends,access_ma_api_depends_user,model_ma_api_depends,base.group_user,1,1,1,1
+access_ma.api.constraints,access_ma_api_constraints_user,model_ma_api_constraints,base.group_user,1,1,1,1
+access_ma.api.returns,access_ma_api_returns_user,model_ma_api_returns,base.group_user,1,1,1,1
+access_ma.api.model.create.multi,access_ma_api_model_create_multi_user,model_ma_api_model_create_multi,base.group_user,1,1,1,1
+
+access_ma.api.delete,access_ma_api_delete_user,model_ma_api_delete,base.group_user,1,1,1,1
+access_ma.api.delete.related.model,access_ma_api_delete_related_model_user,model_ma_api_delete_related_model,base.group_user,1,1,1,1

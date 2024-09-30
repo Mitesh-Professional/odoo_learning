@@ -4,6 +4,13 @@
     "author": "Mitesh Amin",
     "data": [
         "security/ir.model.access.csv",
+        "views/odoo_decorators/api_ondelete.xml",
+        "views/odoo_decorators/api_model_create_multi.xml",
+        "views/odoo_decorators/api_returns.xml",
+        "views/odoo_decorators/api_constraints.xml",
+        "views/odoo_decorators/api_depends.xml",
+        "views/odoo_decorators/api_onchange.xml",
+        "views/odoo_decorators/api_model.xml",
         "views/odoo_views/odoo_kanban.xml",
         "views/odoo_views/odoo_cohort.xml",
         "views/odoo_views/odoo_gantt.xml",

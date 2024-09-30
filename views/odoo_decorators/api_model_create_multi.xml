@@ -1,0 +1,42 @@
+<odoo>
+    <!-- Form View -->
+    <record id="ma_api_model_create_multi_form_view" model="ir.ui.view">
+        <field name="name">ma.api.model.create.multi.form.view</field>
+        <field name="model">ma.api.model.create.multi</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="value"/>
+                    </group>
+                    <div class="o_form_button_group">
+                        <div style="display: inline-block; margin-right: 10px;">
+                            <button name="create_multiple_records" type="object" string="Add Multiple Record"
+                                    class="btn-primary"/>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="ma_api_model_create_multi_tree_view" model="ir.ui.view">
+        <field name="name">ma.api.model.create.multi.tree.view</field>
+        <field name="model">ma.api.model.create.multi</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="value"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="ma_api_model_create_multi_action" model="ir.actions.act_window">
+        <field name="name">Api Model Create Multi</field>
+        <field name="res_model">ma.api.model.create.multi</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

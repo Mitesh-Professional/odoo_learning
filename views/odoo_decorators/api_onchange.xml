@@ -1,0 +1,35 @@
+<odoo>
+    <record id="ma_api_onchange_form" model="ir.ui.view">
+        <field name="name">ma.api.onchange.form</field>
+        <field name="model">ma.api.onchange</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="user_name"/>
+                        <field name="user_password"/>
+                        <field name="conform_password"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ma_api_onchange_tree" model="ir.ui.view">
+        <field name="name">ma.api.onchange.tree</field>
+        <field name="model">ma.api.onchange</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="user_name"/>
+                <field name="user_password"/>
+                <field name="conform_password"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+    <record id="ma_api_onchange_action" model="ir.actions.act_window">
+        <field name="name">Api Onchange</field>
+        <field name="res_model">ma.api.onchange</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,3 +1,32 @@
 <odoo>
-
+    <record id="ma_api_model_form_view" model="ir.ui.view">
+        <field name="name">ma.api.model.form.view</field>
+        <field name="model">ma.api.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>Check odd And Even Number</h1>
+                    <separator/>
+                    <group>
+                        <field name="user_value"/>
+                        <field name="user_result"/>
+                    </group>
+                    <div class="o_form_button_group">
+                        <div style="display: inline-block; margin-right: 10px;">
+                            <button name="action_calculate" type="object" string="Check your Result"
+                                    class="btn-primary"/>
+                        </div>
+                        <div style="display: inline-block;">
+                            <button name="action_reset" type="object" string="Reset Value" class="btn-primary"/>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ma_api_model_action" model="ir.actions.act_window">
+        <field name="name">My API Model</field>
+        <field name="res_model">ma.api.model</field>
+        <field name="view_mode">form</field>
+    </record>
 </odoo>
