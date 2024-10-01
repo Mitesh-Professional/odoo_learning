@@ -8,7 +8,8 @@
                 <sheet>
                     <group>
                         <field name="name"/>
-                        <field name="value"/>
+                        <field name="city_name"/>
+                        <field name="city_people"/>
                     </group>
                     <div class="o_form_button_group">
                         <div style="display: inline-block; margin-right: 10px;">
@@ -28,7 +29,8 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="value"/>
+                <field name="city_name"/>
+                <field name="city_people"/>
             </tree>
         </field>
     </record>

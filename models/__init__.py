@@ -21,6 +21,7 @@ from .odoo_fields import text_fields
 from .odoo_fields import monetary_fields
 from .odoo_fields import relational_1_field
 from .odoo_fields import many2many_fields
+from .odoo_attributes import reqired_attribute
 from .odoo_views import odoo_tree
 from .odoo_views import odoo_form
 from .odoo_views import odoo_search
@@ -37,4 +38,6 @@ from .odoo_decorators import api_constraints
 from .odoo_decorators import api_returns
 from .odoo_decorators import api_model_create_multi
 from .odoo_decorators import api_ondelete
-
+from .odoo_orm_methods import create_method
+from .odoo_orm_methods import write_method
+from .odoo_orm_methods import unlink_method

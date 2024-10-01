@@ -4,6 +4,10 @@
     "author": "Mitesh Amin",
     "data": [
         "security/ir.model.access.csv",
+        "views/odoo_attributes/reqired_attribute.xml",
+        "views/odoo_orm_methods/unlink_method.xml",
+        "views/odoo_orm_methods/write_method.xml",
+        "views/odoo_orm_methods/create_method.xml",
         "views/odoo_decorators/api_ondelete.xml",
         "views/odoo_decorators/api_model_create_multi.xml",
         "views/odoo_decorators/api_returns.xml",

@@ -32,6 +32,10 @@ access_ma.one.to.many,access_ma_one_to_many_user,model_ma_one_to_many,base.group
 access_ma.student.field,access_ma_student_field_user,model_ma_student_field,base.group_user,1,1,1,1
 access_ma.many2many.field,access_ma_many2many_field_user,model_ma_many2many_field,base.group_user,1,1,1,1
 
+
+access_ma_required_attribute,access_ma_required_attribute,model_ma_required_attribute,,1,1,1,1
+
+
 access_ma.tree.view,access_ma_tree_view_user,model_ma_tree_view,base.group_user,1,1,1,1
 access_ma.form.view,access_ma_form_view_user,model_ma_form_view,base.group_user,1,1,1,1
 access_ma.search.view,access_ma_search_view_user,model_ma_search_view,base.group_user,1,1,1,1
@@ -52,3 +56,8 @@ access_ma.api.model.create.multi,access_ma_api_model_create_multi_user,model_ma_
 
 access_ma.api.delete,access_ma_api_delete_user,model_ma_api_delete,base.group_user,1,1,1,1
 access_ma.api.delete.related.model,access_ma_api_delete_related_model_user,model_ma_api_delete_related_model,base.group_user,1,1,1,1
+
+
+access_ma_create_method,access_ma_create_method,model_ma_create_method,,1,1,1,1
+access_ma_write_method,access_ma_write_method,model_ma_write_method,,1,1,1,1
+access_ma_unlink_method,access_ma_unlink_method,model_ma_unlink_method,,1,1,1,1
