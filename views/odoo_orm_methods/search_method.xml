@@ -1,0 +1,40 @@
+<odoo>
+    <!-- Form View -->
+    <record id="ma_search_method_form_view" model="ir.ui.view">
+        <field name="name">ma.search.method.form.view</field>
+        <field name="model">ma.search.method</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="person_age"/>
+                        <button name="search_method"
+                                type="object"
+                                string="Process Record"
+                                class="btn-primary"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="ma_search_method_tree_view" model="ir.ui.view">
+        <field name="name">ma.search.method.tree.view</field>
+        <field name="model">ma.search.method</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="person_age"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="ma_search_method_action" model="ir.actions.act_window">
+        <field name="name">Search Method</field>
+        <field name="res_model">ma.search.method</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

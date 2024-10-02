@@ -22,6 +22,16 @@ from .odoo_fields import monetary_fields
 from .odoo_fields import relational_1_field
 from .odoo_fields import many2many_fields
 from .odoo_attributes import reqired_attribute
+from .odoo_attributes import default_attribute
+from .odoo_attributes import help_attribute
+from .odoo_attributes import index_attribute
+from .odoo_attributes import string_attribute
+from .odoo_attributes import readonly_attribute
+from .odoo_attributes import compute_attribute
+from .odoo_attributes import store_attribute
+from .odoo_attributes import ondelete_attribute
+from .odoo_attributes import copy_attribute
+from .odoo_attributes import domain_attribute
 from .odoo_views import odoo_tree
 from .odoo_views import odoo_form
 from .odoo_views import odoo_search
@@ -41,3 +51,8 @@ from .odoo_decorators import api_ondelete
 from .odoo_orm_methods import create_method
 from .odoo_orm_methods import write_method
 from .odoo_orm_methods import unlink_method
+from .odoo_orm_methods import search_method
+from .odoo_orm_methods import copy_method
+from .odoo_orm_methods import browse_method
+from .odoo_orm_methods import read_method
+from .odoo_orm_methods import search_count_method

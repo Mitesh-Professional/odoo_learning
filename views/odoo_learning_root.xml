@@ -129,7 +129,33 @@
         <!--        This is Attribute section-->
         <menuitem id="ma_require_attribute_menu_item_root" action="ma_require_attribute_action" name="Require"
                   parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_default_attribute_menu_item_root" action="ma_default_attribute_action" name="Default"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_help_attribute_menu_item_root" action="ma_help_attribute_action" name="Help"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_index_attribute_menu_item_root" action="ma_index_attribute_action" name="Index"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_string_attribute_menu_item_root" action="ma_string_attribute_action" name="String"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_readonly_attribute_menu_item_root" action="ma_readonly_attribute_action" name="Readonly"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_compute_attribute_menu_item_root" action="ma_compute_attribute_action" name="Compute"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_store_attribute_menu_item_root" action="ma_store_attribute_action" name="Store"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_copy_attribute_menu_item_root" action="ma_copy_attribute_action" name="Copy"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_domain_attribute_menu_item_root" action="ma_domain_attribute_action" name="Domain"
+                  parent="ma_menu_item_nav_section_Attribute"/>
 
+
+        <menuitem id="ma_ondelete_attribute_menu_item_root" name="OnDelete, Inverse, Comodel_Name"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_ondelete_library_attribute_menu_item_root" action="ma_ondelete_library_attribute_action"
+                  name="Library"
+                  parent="ma_ondelete_attribute_menu_item_root"/>
+        <menuitem id="ma_ondelete_book_attribute_menu_item_root" action="ma_ondelete_book_attribute_action" name="Book"
+                  parent="ma_ondelete_attribute_menu_item_root"/>
 
         <!--        this is View menu-->
         <menuitem id="ma_tree_menu_item_root" action="ma_tree_action_view" name="Tree View"
@@ -182,6 +208,16 @@
         <menuitem id="ma_orm_write_manu_item_root" name="Write" action="ma_write_method_action"
                   parent="ma_menu_item_nav_section_orm_methods"/>
         <menuitem id="ma_orm_unlink_manu_item_root" name="Unlink" action="ma_unlink_method_action"
+                  parent="ma_menu_item_nav_section_orm_methods"/>
+        <menuitem id="ma_orm_search_manu_item_root" name="Search" action="ma_search_method_action"
+                  parent="ma_menu_item_nav_section_orm_methods"/>
+        <menuitem id="ma_orm_copy_manu_item_root" name="Copy" action="ma_copy_method_action"
+                  parent="ma_menu_item_nav_section_orm_methods"/>
+        <menuitem id="ma_orm_read_manu_item_root" name="Read" action="ma_read_method_action"
+                  parent="ma_menu_item_nav_section_orm_methods"/>
+        <menuitem id="ma_orm_browse_manu_item_root" name="Browse" action="ma_browse_method_action"
+                  parent="ma_menu_item_nav_section_orm_methods"/>
+        <menuitem id="ma_orm_search_count_manu_item_root" name="Search Count" action="ma_search_count_method_action"
                   parent="ma_menu_item_nav_section_orm_methods"/>
     </data>
 </odoo>

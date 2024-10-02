@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="ma_default_attribute_form_view" model="ir.ui.view">
+            <field name="name">ma.default.attribute.form.view</field>
+            <field name="model">ma.default.attribute</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_default_attribute_tree_view" model="ir.ui.view">
+            <field name="name">ma.default.attribute.tree.view</field>
+            <field name="model">ma.default.attribute</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ma_default_attribute_action" model="ir.actions.act_window">
+            <field name="name">Default Attribute</field>
+            <field name="res_model">ma.default.attribute</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

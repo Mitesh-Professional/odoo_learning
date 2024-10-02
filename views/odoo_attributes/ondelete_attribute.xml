@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+<!--        This is library View-->
+        <record id="ma_ondelete_library_attribute_form_view" model="ir.ui.view">
+            <field name="name">ma.ondelete.library.attribute.form.view</field>
+            <field name="model">ma.ondelete.library.attribute</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="book_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_ondelete_library_attribute_tree_view" model="ir.ui.view">
+            <field name="name">ma.ondelete.library.attribute.tree.view</field>
+            <field name="model">ma.ondelete.library.attribute</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="book_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ma_ondelete_library_attribute_action" model="ir.actions.act_window">
+            <field name="name">OnDelete Attribute</field>
+            <field name="res_model">ma.ondelete.library.attribute</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+<!--This is Book View-->
+        <record id="ma_ondelete_book_attribute_form_view" model="ir.ui.view">
+            <field name="name">ma.ondelete.book.attribute.form.view</field>
+            <field name="model">ma.ondelete.book.attribute</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="library_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_ondelete_book_attribute_tree_view" model="ir.ui.view">
+            <field name="name">ma.ondelete.book.attribute.tree.view</field>
+            <field name="model">ma.ondelete.book.attribute</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="library_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ma_ondelete_book_attribute_action" model="ir.actions.act_window">
+            <field name="name">OnDelete Attribute</field>
+            <field name="res_model">ma.ondelete.book.attribute</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

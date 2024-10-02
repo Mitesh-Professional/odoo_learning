@@ -1,0 +1,42 @@
+<odoo>
+    <!-- Form View -->
+    <record id="ma_browse_method_form_view" model="ir.ui.view">
+        <field name="name">ma.browse.method.form.view</field>
+        <field name="model">ma.browse.method</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="get_record"
+                            type="object"
+                            string="Process Record"
+                            class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="person_age"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="ma_copy_method_tree_view" model="ir.ui.view">
+        <field name="name">ma.browse.method.tree.view</field>
+        <field name="model">ma.browse.method</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="person_age"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="ma_browse_method_action" model="ir.actions.act_window">
+        <field name="name">Browse Method</field>
+        <field name="res_model">ma.browse.method</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

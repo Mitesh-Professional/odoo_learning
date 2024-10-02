@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <record id="ma_domain_attribute_form_view" model="ir.ui.view">
+            <field name="name">ma.domain.attribute.form.view</field>
+            <field name="model">ma.domain.attribute</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="age"/>
+                        <field name="gender"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_domain_attribute_tree_view" model="ir.ui.view">
+            <field name="name">ma.domain.attribute.tree.view</field>
+            <field name="model">ma.domain.attribute</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="gender"/>
+                </tree>
+            </field>
+        </record>
+        <record id="ma_domain_attribute_action" model="ir.actions.act_window">
+            <field name="name">Domain</field>
+            <field name="res_model">ma.domain.attribute</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('gender', '=', 'Male')] </field>
+        </record>
+    </data>
+</odoo>

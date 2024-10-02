@@ -1,0 +1,42 @@
+<odoo>
+    <!-- Form View -->
+    <record id="ma_copy_method_form_view" model="ir.ui.view">
+        <field name="name">ma.copy.method.form.view</field>
+        <field name="model">ma.copy.method</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="copy_method"
+                            type="object"
+                            string="Make A Copy"
+                            class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="person_age"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="ma_copy_method_tree_view" model="ir.ui.view">
+        <field name="name">ma.copy.method.tree.view</field>
+        <field name="model">ma.copy.method</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="person_age"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="ma_copy_method_action" model="ir.actions.act_window">
+        <field name="name">Copy Method</field>
+        <field name="res_model">ma.copy.method</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

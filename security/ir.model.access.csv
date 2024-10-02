@@ -34,6 +34,18 @@ access_ma.many2many.field,access_ma_many2many_field_user,model_ma_many2many_fiel
 
 
 access_ma_required_attribute,access_ma_required_attribute,model_ma_required_attribute,,1,1,1,1
+access_ma_default_attribute,access_ma_default_attribute,model_ma_default_attribute,,1,1,1,1
+access_ma_help_attribute,access_ma_help_attribute,model_ma_help_attribute,,1,1,1,1
+access_ma_index_attribute,access_ma_index_attribute,model_ma_index_attribute,,1,1,1,1
+access_ma_string_attribute,access_ma_string_attribute,model_ma_string_attribute,,1,1,1,1
+access_ma_readonly_attribute,access_ma_readonly_attribute,model_ma_readonly_attribute,,1,1,1,1
+access_ma_compute_attribute,access_ma_compute_attribute,model_ma_compute_attribute,,1,1,1,1
+access_ma_store_attribute,access_ma_store_attribute,model_ma_store_attribute,,1,1,1,1
+access_ma_copy_attribute,access_ma_copy_attribute,model_ma_copy_attribute,,1,1,1,1
+access_ma_domain_attribute,access_ma_domain_attribute,model_ma_domain_attribute,,1,1,1,1
+
+access_ma_ondelete_library_attribute,access_ma_ondelete_library_attribute,model_ma_ondelete_library_attribute,,1,1,1,1
+access_ma_ondelete_book_attribute,access_ma_ondelete_book_attribute,model_ma_ondelete_book_attribute,,1,1,1,1
 
 
 access_ma.tree.view,access_ma_tree_view_user,model_ma_tree_view,base.group_user,1,1,1,1
@@ -61,3 +73,8 @@ access_ma.api.delete.related.model,access_ma_api_delete_related_model_user,model
 access_ma_create_method,access_ma_create_method,model_ma_create_method,,1,1,1,1
 access_ma_write_method,access_ma_write_method,model_ma_write_method,,1,1,1,1
 access_ma_unlink_method,access_ma_unlink_method,model_ma_unlink_method,,1,1,1,1
+access_ma_search_method,access_ma_search_method,model_ma_search_method,,1,1,1,1
+access_ma_copy_method,access_ma_copy_method,model_ma_copy_method,,1,1,1,1
+access_ma_browse_method,access_ma_browse_method,model_ma_browse_method,,1,1,1,1
+access_ma_read_method,access_ma_read_method,model_ma_read_method,,1,1,1,1
+access_ma_search_count_method,access_ma_search_count_method,model_ma_search_count_method,,1,1,1,1
