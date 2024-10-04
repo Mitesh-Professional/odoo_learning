@@ -57,6 +57,7 @@
         <menuitem id="ma_menu_item_nav_section_view" name="Views" parent="ma_menu_item_root"/>
         <menuitem id="ma_menu_item_nav_section_decorators" name="Decorators" parent="ma_menu_item_root"/>
         <menuitem id="ma_menu_item_nav_section_orm_methods" name="ORM Methods" parent="ma_menu_item_root"/>
+        <menuitem id="ma_menu_item_nav_section_error_handling" name="Error Handling" parent="ma_menu_item_root"/>
 
         <!--        Class Attribute-->
         <menuitem id="ma_menu_item_create_model" name="Create Model" parent="ma_menu_item_nav_section_create_model"
@@ -135,7 +136,7 @@
                   parent="ma_menu_item_nav_section_Attribute"/>
         <menuitem id="ma_index_attribute_menu_item_root" action="ma_index_attribute_action" name="Index"
                   parent="ma_menu_item_nav_section_Attribute"/>
-        <menuitem id="ma_string_attribute_menu_item_root" action="ma_string_attribute_action" name="String"
+        <menuitem id="ma_string_attribute_menu_item_root" action="ma_string_attribute_action" name="String, Translate"
                   parent="ma_menu_item_nav_section_Attribute"/>
         <menuitem id="ma_readonly_attribute_menu_item_root" action="ma_readonly_attribute_action" name="Readonly"
                   parent="ma_menu_item_nav_section_Attribute"/>
@@ -147,9 +148,16 @@
                   parent="ma_menu_item_nav_section_Attribute"/>
         <menuitem id="ma_domain_attribute_menu_item_root" action="ma_domain_attribute_action" name="Domain"
                   parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_related_menu_item_root" action="ma_related_attribute_action" name="Related"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_context_menu_item_root" action="ma_context_attribute_action" name="Context"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_tracking_menu_item_root" action="ma_tracking_attribute_action" name="Tracking"
+                  parent="ma_menu_item_nav_section_Attribute"/>
+        <menuitem id="ma_column_menu_item_root" action="ma_column_attribute_action" name="Column"
+                  parent="ma_menu_item_nav_section_Attribute"/>
 
-
-        <menuitem id="ma_ondelete_attribute_menu_item_root" name="OnDelete, Inverse, Comodel_Name"
+        <menuitem id="ma_ondelete_attribute_menu_item_root" name="OnDelete, Inverse, Comodel_Name, Relation"
                   parent="ma_menu_item_nav_section_Attribute"/>
         <menuitem id="ma_ondelete_library_attribute_menu_item_root" action="ma_ondelete_library_attribute_action"
                   name="Library"
@@ -219,5 +227,22 @@
                   parent="ma_menu_item_nav_section_orm_methods"/>
         <menuitem id="ma_orm_search_count_manu_item_root" name="Search Count" action="ma_search_count_method_action"
                   parent="ma_menu_item_nav_section_orm_methods"/>
+        <menuitem id="ma_orm_search_read_manu_item_root" name="Search Read" action="ma_search_read_method_action"
+                  parent="ma_menu_item_nav_section_orm_methods"/>
+        <menuitem id="ma_orm_read_group_manu_item_root" name="Read Group" action="ma_read_group_method_action"
+                  parent="ma_menu_item_nav_section_orm_methods"/>
+        <menuitem id="ma_orm_name_search_manu_item_root" name="Name Search" action="ma_name_search_method_action"
+                  parent="ma_menu_item_nav_section_orm_methods"/>
+        <menuitem id="ma_orm_name_get_manu_item_root" name="Name Get" action="ma_name_get_method_action"
+                  parent="ma_menu_item_nav_section_orm_methods"/>
+
+        <!--        this is error handling part-->
+        <menuitem id="ma_exception_handling_manu_item_root" name="Exception Handling"
+                  action="ma_exception_handling_action"
+                  parent="ma_menu_item_nav_section_error_handling"/>
+        <menuitem id="ma_validation_handling_manu_item_root" name="Validation"
+                  action="ma_validation_handling_action"
+                  parent="ma_menu_item_nav_section_error_handling"/>
+
     </data>
 </odoo>

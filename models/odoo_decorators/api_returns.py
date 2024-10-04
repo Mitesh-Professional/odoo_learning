@@ -3,6 +3,7 @@ from odoo.exceptions import ValidationError
 
 class ApiReturns(models.Model):
     _name = 'ma.api.returns'
+    _description = "The @api.returns decorator in Odoo specifies the return type of a method, ensuring that the method outputs the expected data format or model instance."
     name = fields.Char(string="Name")
     description = fields.Text(string="Description")
 

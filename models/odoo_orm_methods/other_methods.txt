@@ -1,0 +1,84 @@
+Call:-
+
+API Calls: Calling methods defined in Odoo models to perform actions like creating, updating, or deleting records. This is usually done through RPC (Remote Procedure Call) mechanisms when interacting with Odoo from an external application.
+
+Button Actions: When a button is clicked in the Odoo interface, it may trigger a method call defined in the corresponding model. This can involve complex business logic.
+
+Scheduled Actions: Odoo can execute methods on a schedule, such as automatic data updates or report generation, which is also referred to as a "call."
+
+Web Services: Odoo provides web service endpoints that allow external applications to make calls to Odoo for data retrieval or manipulation.
+
+- Creating a New Record
+- Calling a Method
+- Button Action in XML
+- Scheduled Action to Send Reminder Emails
+- Scheduled code
+from odoo import models, api
+
+class Subscription(models.Model):
+    _name = 'my.subscription'
+
+    @api.model
+    def send_expiration_reminders(self):
+        # Find subscriptions that are about to expire
+        subscriptions = self.search([('expiration_date', '<=', fields.Date.today() + timedelta(days=7))])
+        for subscription in subscriptions:
+            # Logic to send an email (using Odoo's mail template)
+            template = self.env.ref('my_module.email_template_subscription_reminder')
+            self.env['mail.template'].browse(template.id).send_mail(subscription.id)
+
+xml code:-
+<record id="ir_cron_send_expiration_reminders" model="ir.cron">
+    <field name="name">Send Subscription Expiration Reminders</field>
+    <field name="model_id" ref="model_my_subscription"/>
+    <field name="state">code</field>
+    <field name="code">model.send_expiration_reminders()</field>
+    <field name="schedule">0 9 * * *</field>  <!-- Runs every day at 9 AM -->
+</record>
+
+
+Web Services:-
+- Types of Web Services in Odoo
+XML-RPC: A protocol that allows remote procedure calls using XML. It's commonly used for integration with external systems.
+
+JSON-RPC: Similar to XML-RPC, but uses JSON instead of XML for data serialization. This is more lightweight and often preferred for modern applications.
+
+REST API: Odoo has a RESTful API that provides a more straightforward way to interact with Odoo resources. This can be accessed through specific routes in the Odoo web interface.
+
+code:-
+import requests
+import json
+
+url = 'http://localhost:8069/jsonrpc'
+db = 'your_database'
+username = 'your_username'
+password = 'your_password'
+
+# Authenticate
+auth_response = requests.post(url, json={
+    'jsonrpc': '2.0',
+    'method': 'call',
+    'params': {
+        'service': 'common',
+        'method': 'login',
+        'args': [db, username, password],
+    },
+    'id': 1,
+})
+uid = auth_response.json()['result']
+
+# Create a new partner
+create_response = requests.post(url, json={
+    'jsonrpc': '2.0',
+    'method': 'call',
+    'params': {
+        'model': 'res.partner',
+        'method': 'create',
+        'args': [{'name': 'New Partner', 'email': 'newpartner@example.com'}],
+    },
+    'id': 1,
+})
+partner_id = create_response.json()['result']
+
+print(f'Created partner with ID: {partner_id}')
+

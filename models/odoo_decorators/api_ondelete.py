@@ -3,7 +3,7 @@ from odoo.exceptions import ValidationError
 
 class ApiOndelete(models.Model):
     _name = 'ma.api.delete'
-
+    _description = "The @api.ondelete decorator in Odoo is used to define actions that should be triggered when a record is deleted."
     name = fields.Char(string="Name")
     related_field = fields.Many2one('ma.api.delete.related.model', string="Related Field")
 
@@ -14,5 +14,6 @@ class ApiOndelete(models.Model):
 
 class RelatedModel(models.Model):
     _name = 'ma.api.delete.related.model'
+    _description = "The @api.ondelete decorator in Odoo is used to define actions that should be triggered when a record is deleted."
 
     name = fields.Char(string="Name")

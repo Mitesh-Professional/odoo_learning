@@ -32,6 +32,10 @@ from .odoo_attributes import store_attribute
 from .odoo_attributes import ondelete_attribute
 from .odoo_attributes import copy_attribute
 from .odoo_attributes import domain_attribute
+from .odoo_attributes import related_attribute
+from .odoo_attributes import context_attribute
+from .odoo_attributes import tracking_attribute
+from .odoo_attributes import column_attribute
 from .odoo_views import odoo_tree
 from .odoo_views import odoo_form
 from .odoo_views import odoo_search
@@ -56,3 +60,9 @@ from .odoo_orm_methods import copy_method
 from .odoo_orm_methods import browse_method
 from .odoo_orm_methods import read_method
 from .odoo_orm_methods import search_count_method
+from .odoo_orm_methods import search_read
+from .odoo_orm_methods import read_group
+from .odoo_orm_methods import name_search
+from .odoo_orm_methods import name_get
+from .odoo_error_handling import exception_handling
+from .odoo_error_handling import validation_error

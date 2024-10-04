@@ -1,0 +1,37 @@
+<odoo>
+    <!-- Form View -->
+    <record id="ma_read_group_method_form_view" model="ir.ui.view">
+        <field name="name">ma.read.group.method.form.view</field>
+        <field name="model">ma.read.group.method</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="gender"/>
+                    </group>
+                    <button name="get_read_group_by" type="object" string="Fetch Records" class="oe_highlight"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="ma_read_group_method_tree_view" model="ir.ui.view">
+        <field name="name">ma.read.group.method.tree.view</field>
+        <field name="model">ma.read.group.method</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="gender"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="ma_read_group_method_action" model="ir.actions.act_window">
+        <field name="name">Read Group Method</field>
+        <field name="res_model">ma.read.group.method</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

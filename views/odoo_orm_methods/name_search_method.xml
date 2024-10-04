@@ -1,0 +1,38 @@
+<odoo>
+    <!-- Form View -->
+    <record id="ma_name_search_method_form_view" model="ir.ui.view">
+        <field name="name">ma.name.search.method.form.view</field>
+        <field name="model">ma.name.search.method</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="user_name"/>
+                        <field name="user"/>
+                        <field name="total_entries"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="ma_name_search_method_tree_view" model="ir.ui.view">
+        <field name="name">ma.name.search.method.tree.view</field>
+        <field name="model">ma.name.search.method</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="user_name"/>
+                <field name="user"/>
+                <field name="total_entries"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="ma_name_search_method_action" model="ir.actions.act_window">
+        <field name="name">Name Search Method</field>
+        <field name="res_model">ma.name.search.method</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

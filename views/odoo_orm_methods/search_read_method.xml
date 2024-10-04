@@ -1,0 +1,39 @@
+<odoo>
+    <!-- Form View -->
+    <record id="ma_search_read_method_form_view" model="ir.ui.view">
+        <field name="name">ma.search.read.method.form.view</field>
+        <field name="model">ma.search.read.method</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="value"/>
+                    </group>
+                    <button name="search_read_custom" type="object" string="Fetch Records" class="oe_highlight"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="ma_search_read_method_tree_view" model="ir.ui.view">
+        <field name="name">ma.search.read.method.tree.view</field>
+        <field name="model">ma.search.read.method</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="value"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="ma_search_read_method_action" model="ir.actions.act_window">
+        <field name="name">Search Read Method</field>
+        <field name="res_model">ma.search.read.method</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

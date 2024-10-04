@@ -2,7 +2,7 @@ from odoo import models, fields, api
 
 class ApiModelCreateMulti(models.Model):
     _name = 'ma.api.model.create.multi'
-
+    _description = "The @api.model decorator in Odoo is used to define methods that can be called on the model level, allowing operations like creating multiple records at once."
     name = fields.Char(string='Name')
     city_name= fields.Char(string="City Name")
     city_people = fields.Integer(string='Population')

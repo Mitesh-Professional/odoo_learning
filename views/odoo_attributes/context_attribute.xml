@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <record id="ma_context_attribute_form_view" model="ir.ui.view">
+            <field name="name">ma.context.attribute.form.view</field>
+            <field name="model">ma.context.attribute</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name_value"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="ma_context_attribute_tree_view" model="ir.ui.view">
+            <field name="name">ma.context.attribute.tree.view</field>
+            <field name="model">ma.context.attribute</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name_value"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ma_context_attribute_action" model="ir.actions.act_window">
+            <field name="name">Context Attribute</field>
+            <field name="res_model">ma.context.attribute</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'name':'mitesh'}</field>
+        </record>
+    </data>
+</odoo>

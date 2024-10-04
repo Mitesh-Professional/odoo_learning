@@ -9,4 +9,4 @@ class ReadMethod(models.Model):
 
     def read_method(self):
         read_value = self.env['ma.read.method'].search([])
-        print(f"****************************{read_value.read([])}****************************")
+        print(f"****************************{read_value.read(['name'])}****************************")
